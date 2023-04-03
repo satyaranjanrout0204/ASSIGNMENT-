@@ -1,0 +1,26 @@
+Automate Menu and Sub Menu and click on a link in Sub Menu and navigate to the page and click on an element?
+
+
+class SubMenuClick{
+   public static void main(String[] args) {
+      System.setProperty("webdriver.chrome.driver",
+         "./driver/chromedriver.exe");
+      WebDriver driver = new ChromeDriver();
+      //implicit wait
+      driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+      //URL launch
+      driver.get("https://www.amazon.com/");
+      //identify menu
+      WebElement n=driver.findElement(By.id("nav-link-accountList"));
+      // object of Actions with method moveToElement
+      Actions a = new Actions(driver);
+      a.moveToElement(n).perform();
+      //identify sub-menu element
+      WebElement m=driver.
+      findElement(By.xpath("//*[text()='Create a List']"));
+      //move to element and click
+      a.moveToElement(m).click().perform();
+      System.out.println("Page navigated to: " +driver.getTitle());
+      driver.quit();
+}
+}

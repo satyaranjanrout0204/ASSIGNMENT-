@@ -1,0 +1,33 @@
+Select multiple options from the dropdown?
+
+In order to select multiple options we have to use "SELECT " CLASS.
+2-select class is a parametorize constructor where it will take an argumnet of type "WebElement".
+3-In order to select the multiple options we use "getOptions()".
+4-below mention the code for -
+class PrintAlloptions {
+	static {
+		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+	
+		WebDriver driver=new ChromeDriver();
+       driver.manage().timeOuts().implicitlyWait(10,TimeUnits:SECONDS);
+		driver.get("file:///D:/dishs.html");
+		WebElement mtrListbox = driver.findElement(By.id("mtr"));
+		Select s=new Select(mtrListbox);
+	
+		List<WebElement> allOption = s.getOptions();
+	   int count=allOption.size();
+		for(int i=0;i<count;i++) {
+			s.selectByIndex(i);
+			String text = allOption.get(i).getText();
+			System.out.println(text);
+		}
+		driver.close();
+		
+		
+
+	}
+
+}

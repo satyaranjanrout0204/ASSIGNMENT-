@@ -1,0 +1,19 @@
+class DemoScreenShot{
+static {
+		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+	}
+@Test
+public void screenShot() throws IOException {
+		WebDriver driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get("www.chrome.com");
+       String res=result.getName();
+       TakesScreenshot t=(TakesScreenshot)driver;
+       File src=t.getScreenshotAs(OutputType.FILE);
+
+       File desc=new File("./ScreenShot/"+res+".png");
+       FileUtils.copyFile(src, desc);
+       driver.close();
+        
+}
+}

@@ -1,0 +1,16 @@
+1-Write code for handling multiple windows.
+ANS- CLASS MULTIPLE {
+Static {
+System.setProperty(“webdriver.chrome.driver”,”./driver/chromedriver.exe”);
+}
+Public static void main (String[ ]args){
+WebDriver driver=new ChromeDriver ();
+Driver.get(“www.chrome.com”);
+Driver.findElement(By.id(“first”)).click();
+Driver.findElement(By.id(‘second”)). click();
+Set<String>all=driver.getWindowHandles();
+For(String windows:all){
+driver.switchTo().window(windows);
+Driver.close();
+}
+}

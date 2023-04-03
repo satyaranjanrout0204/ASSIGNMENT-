@@ -1,0 +1,23 @@
+Write code for positive and negative scenarios for Alerts?
+
+ 
+class AlertPopupHandel {
+	static {
+		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+	}
+	public static void main(String[] args) {
+	    WebDriver driver=new ChromeDriver();
+		driver.get("https://demo.automationtesting.in/Alerts.html");
+		driver.findElement(By.xpath("//button[@class='btn btn-danger']     ")).click();
+		
+		Alert a = driver.switchTo().alert();
+		String text = a.getText();
+		//to click on ok button
+		a.accept();
+		//to click on cancel button
+		a.dismiss();
+		System.out.println(text);
+
+	}
+
+}

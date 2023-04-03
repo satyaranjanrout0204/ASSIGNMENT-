@@ -1,0 +1,18 @@
+Write code for handling Frames?
+
+class FrameSet {
+   public static void main(String[] args) {
+      System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+      WebDriver driver = new ChromeDriver();
+      driver.get("page.html");
+      driver.manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
+      //grabbing the first frame with the help of index
+      driver.switchTo().frame(0);
+      //grabbing the frame with the help of frame name
+      driver.switchTo().frame(“<<name expression>>“);
+      //grabbing the frame with the help of frame webelement
+      WebElement name = driver.findElement(By.name(“frame-right”));
+      driver.switchTo().frame(driver.findElement(By.name(“<<name expression”)));
+      driver.quit();
+   }
+}

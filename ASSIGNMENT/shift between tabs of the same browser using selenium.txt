@@ -1,0 +1,5 @@
+How to shift between tabs of the same browser using selenium?
+
+
+Tab is also traeted as new window in Selenium. Here we are going to handle the tab in the same way as we handle "childwindow popup".
+ In order to handle tab we use"getWindowHandle" ,"getWindowHandles",Driver.switchTo().window()" statement.

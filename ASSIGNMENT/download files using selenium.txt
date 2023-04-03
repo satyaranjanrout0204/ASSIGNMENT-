@@ -1,0 +1,6 @@
+How to perform download files using selenium?
+
+
+
+ANS- In chrome browser and newer version of firefox browser no need to handle for download the file it will automatically download the file, but in the older version of firefox browser in order to download the file we have to use "ROBOT CLASS".
+      ROBOT CLASS  is java class which is present in the "awt package"(abstract window toolkit).Using robot class we handle the keyword operaion for "KEYPRESS" AND "KEY RELEASE".

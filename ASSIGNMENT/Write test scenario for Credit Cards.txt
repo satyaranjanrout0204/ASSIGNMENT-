@@ -1,0 +1,52 @@
+Write test scenario for Credit Cards?
+
+
+
+
+1-Check whether the bank appears over the credit card.
+2-Check if the logo of the respective bank is displayed.
+3-Check the type of the credit card logo is displaying properly. Example: Visa, Mastercard.
+4-Check if the Credit card number is displaying clearly.
+5-Check if the expiration date is visible.
+6-Check whether the CVV number is displayed clearly on the backside of the card.
+7-Check whether the user name is displaying properly.
+8-Check if the color of the credit card is as per the requirement document.
+9-Check if the credit card size (length & width) is as per the requirement.
+10-Check the wifi symbol is displaying properly on the credit card.
+11-Check if the magnetic stripe width is displaying as per the requirement.
+12-Check if the Hologram is displaying over the card.
+13-Check if the weight of the cards is as per the document specification.
+14-Test Cases For Credit Card Payment
+15-Check the maximum credit limit of the card.
+16-Check the maximum withdrawal limit of the credit card.
+17-Check whether international transactions are allowed on the card or not.
+18-Check whether domestic transactions are allowed or not.
+19-Check if the user can withdraw cash using the credit card or not.
+20-Check users can withdraw cash by using a valid pin.
+21-Check user can withdraw cash by using an invalid pin.
+22-Check that you can void a payment before posting it and that after posting a payment, voiding is not allowed.
+23-Negative Credit Card Testing Scenarios / Negative Test Cases for Credit Card Payment
+24-Check if the user can perform the transaction with an invalid pin.
+25-Check the user should not allow performing any transaction after the maximum limit.
+26-Test Case For Credit Card Application Processing
+27-Check the valid card number and check whether the Credit Card is valid.
+28-Check for the expiry month and expiry year.
+29-Check for the three-digit CVC pin is valid or not.
+30-Check with an invalid card number
+31-Check with an invalid CVC number.
+32-Check for the valid user(number).
+33-Check for his/her last login (whether that falls within the quota, the date after his bill was sent)
+34-Check for the balance amount that he can access from the allowed one(say Rs.10,000 or 50,000 and the amount that he/she needs for the current transaction.
+35-Check for the Account holder’s Name on the Credit Card
+36-Check for the expiration date on the card.
+37-Check with past expiration months and year
+38-Check card field accepts characters
+39-The amount will be detected only when all the details are correct
+40-If any card details fail, it should throw an error message
+41-The transaction will be declined when a card does not have enough balance in their account
+42-Checking with a valid card and valid pin.
+43-Checking with a valid card and an invalid pin
+44-Checking with invalid cards and pin
+45-Check how much the balance is on the Card is.
+46-Check the Credit Card Verification number on the card.
+47-Check for the Credit Card Payment Due Date

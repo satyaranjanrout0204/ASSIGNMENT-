@@ -1,0 +1,15 @@
+How to find more than one web element in the list?
+
+
+1-In order to find more than one element we have to use "FINDELEMENTS METHOD".
+2-FINDELEMENTS METHOD present in the "SEARCHCONTEXT";
+3-The return type of findelements method is"LIST<WEBELEMENTS>";
+4-IF locators are matching with multiple elements it will give all matching elements.
+5-the code are written as soon in below::
+
+List<WebElement> allLinks = driver.findElements(By.xpath("//span[contains(.,'java')]"));	
+		int count = allLinks.size();
+		System.out.println(count);
+		for (int i=0; i<count; i++) {
+			String text=allLinks.get(i).getText();
+			System.out.println(text);

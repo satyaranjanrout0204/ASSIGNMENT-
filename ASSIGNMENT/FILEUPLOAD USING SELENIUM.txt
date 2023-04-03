@@ -1,0 +1,27 @@
+How to do file upload in Selenium?
+
+1-To handle File upload we specify the absolute path of the file as an argument for sendKeys method.
+2-sendKeys methods should be used on the element which if we click() it display fileupload popup.
+3-In order to make the code generic we use relative path of the file but sendKeys method will take only absolute path of the file . So we use "getAbsolutePath" method of the file class.
+4-code::
+class FileUpload{
+static {
+		System.setProperty("webdriver.chrome.driver","./driver/chromedriver.exe");
+	}
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriver driver=new ChromeDriver();
+        driver.manage().timeOuts().implictilyWait(10,TimeUnit:Seconds);
+		driver.get("file:///D:/Resume.html");
+	    File f=new File("./Data/Resume.docx");
+         String absolutepath = f.getAbsolutePath();
+		 driver.findElement(By.id("cv")).sendKeys(absolutepath);
+         System.out.println(absolutepath);
+		 driver.close();
+		
+
+	}
+	
+
+}
